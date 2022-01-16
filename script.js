@@ -29,27 +29,42 @@ function playerPlay () {
     return options.toUpperCase();
 }
 
+let computerSelection = computerPlay();
+let playerSelection = playerPlay();
+
 function  gameRound(playerSelection,computerSelection) {
-    playerSelection = playerPlay();
-    computerSelection = computerPlay();
-    if (playerPlay() === computerPlay) {alert("Tie game!");
-}   else if ((playerSelection==="ROCK" && computerSelection==="SCISSORS") || 
-(playerSelection==="SCISSORS" && computerSelection==="PAPER") ||
-(playerSelection==="PAPER" && computerSelection==="ROCK" )
+
+    if (playerSelection === computerSelection) {alert("Tie game!");
+
+}   else if (
+    (playerSelection==="ROCK" && computerSelection==="SCISSORS") || 
+    (playerSelection==="SCISSORS" && computerSelection==="PAPER") ||
+    (playerSelection==="PAPER" && computerSelection==="ROCK" )
 ){
     alert("You won this round.");
     roundCount++;
-    playerScore +1;
+    playerScore++;
     return computerScore, playerScore;
 }
-    else if (computerSelection==="ROCK" && playerSelection === "SCISSORS") ||
+    else if (
+    (computerSelection==="ROCK" && playerSelection === "SCISSORS") ||
     (computerSelection === "SCISSORS" && playerSelection === "PAPER") ||
     (computerSelection=== "PAPER" && playerSelection === "ROCK") 
-    {
+    ){
         alert("Computer won this round (shame on your cow)");
         roundCount++;
-        computerScore + 1;
+        computerScore++;
         return computerScore, playerScore;
     }
 }
+function endGame() {
+    if (roundCount === 10 && playerScore===computerScore) {
+        alert("Tie game");
+    }
+    else if (roundCount === 10 && playerScore>computerScore) {
+        alert("You won, you sick fuck, YOU WON!");
+    }
+    else if ( roundCount === 10 && computerScore>playerScore) {
+        alert("Shame on your cow, game over for you...defeated by a pc... what a loser...");
+    }
 }
