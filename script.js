@@ -64,7 +64,6 @@ function comparingResults() {
         roundCount++;
         alert("This is a draw...");
     }
-    console.log("this is the round number " + roundCount); 
     return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
 }
 
@@ -88,4 +87,10 @@ function endGame() {
         roundsLeft = 10 - roundCount;
         console.log("You have " +roundsLeft + " of rounds left, lets see who wins this game...");
     }
+}
+function gameRound() {
+    comparingResults();
+    console.log("this is the round number " + roundCount); 
+    endGame();
+    return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
 }
