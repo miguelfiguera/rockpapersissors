@@ -87,6 +87,7 @@ function comparingResults() {
         roundCount++;
         alert("This is a draw...");
     }
+    console.log ("You have choseen: " + playerSelection);
     console.log("The Borg have choseen: " + computerSelection);
     return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
 }
@@ -125,10 +126,10 @@ function game() {
 }
 function rules() {
     let message1 = "The rules are simple: ";
-    let message2 = "Rock smash scissors crushes lizzard,";
-    let message3 = "paper disproves spock covers rock,";
-    let message4 = "scissors decapitated lizzard cut paper,";
-    let message5 = "spock smashes scissors fasers rock...";
+    let message2 = "Rock smash scissors and crushes lizzard,";
+    let message3 = "paper disproves spock and covers rock,";
+    let message4 = "scissors decapitated lizzard and cut paper,";
+    let message5 = "spock smashes scissors and fasers rock...";
     let message6 = "and lizzard poisons spock and eats paper...";
     let message7 = "you have ten rounds, the first team to get to 5 points wins the game";
     let message8 = "just type game() to begin, and good luck, mon capitane";
@@ -141,27 +142,42 @@ function rules() {
     console.log(message7);
     console.log(message8);
 } 
+/* Trying to do a loop until one of the "endgame happens"
 function tenRounds() {
-let i = 0;
-while (i !=10){
+while (
+    (roundCount != 10 && playerScore !=5) ||
+    (roundCount != 10 && computerScore!=5)||
+    (roundCount == 10 && playerScore===computerScore)) {
     game();
-    i++;
     console.log( "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".");
  }
-}
-function reset() {
-    let playerScore = 0;
-    let roundCount = 0;
-    let computerScore= 0;
-}
+}*/
+function reset() { 
+    playerScore = 0;
+    roundCount = 0;
+    computerScore = 0;
+    console.log(  "Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".");
+}//in review cause it modifies the global variables at a local point.
 
 function help() {
     let message1="game() plays one round of this game.";
-    let message2= "reset() puts the score and the rounds on 0 again.";;
+    let message2= "reset() puts the score and the rounds on 0 again.";
+    let message3= "tenRounds() plays all the rounds one after the other (for people in a hurry).";
     let message4= "rules() opens an explanation of how to play 'Rock, Paper, Scissors, Lizzard and Spock.";
+    let message5= "You can use suddenDeath() to define everything in just one round...";
     console.log(message1);
     console.log(message2);
     console.log(message3);
     console.log(message4);
-    
+    console.log(message5);
 }
+function suddenDeath() { 
+    computerScore = 4;
+    roundCount= 7;
+    playerScore= 4;
+    console.log(  "Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".");
+    do { game();
+     } while( 
+        (playerScore != 5 && computerScore < 5)||
+        (computerScore != 5 && playerScore< 5));
+}//in review cause it modifies the global variables at a local point.
