@@ -91,18 +91,23 @@ function comparingResults() {
 }
 
 function endGame() {
-    if (roundCount === 10 && playerScore===computerScore) {
-        alert("Tie game");
+    if (
+        (roundCount === 10 && playerScore===computerScore)||
+        (roundCount > 10 && playerScore===computerScore )) {
+        alert("Tie game... one more");
+        game();
     }
     else if(
         (roundCount === 10 && playerScore>computerScore) ||
-        (playerScore === 5)) 
+        (playerScore === 5)||
+        (roundCount >= 10 && playerScore>computerScore )) 
         {
         alert("You save the day captain. Live long and prosper.");
     }
     else if (
             ( roundCount === 10 && computerScore>playerScore) ||
-            (computerScore===5)) 
+            (computerScore===5)||
+            ( roundCount >= 10 && computerScore>playerScore)) 
             {
         alert("The Borg now rule this world and they're gonna assimilated us... bip bop bip...resistance is futile...");
     }
