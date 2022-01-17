@@ -64,7 +64,8 @@ function comparingResults() {
         roundCount++;
         alert("This is a draw...");
     }
-     return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
+    console.log("this is the round number " + roundCount); 
+    return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
 }
 
 function endGame() {
@@ -73,7 +74,7 @@ function endGame() {
     }
     else if(
         (roundCount === 10 && playerScore>computerScore) ||
-        (playerscore === 5)) 
+        (playerScore === 5)) 
         {
         alert("You won, you sick fuck, YOU WON!");
     }
@@ -85,6 +86,6 @@ function endGame() {
     }
     else { 
         roundsLeft = 10 - roundCount;
-        console.log("You have ${roundsLeft} of rounds left, lets see who wins this game...");
+        console.log("You have " +roundsLeft + " of rounds left, lets see who wins this game...");
     }
 }
