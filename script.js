@@ -7,16 +7,16 @@
 //3) compares both of the variables.
 //4) Determines which is greater than the other.
 //5) shows a message of victory, draw or loss.
-alert("Welcome to rock,paper,scissors");
-alert("Humanity is in the verge of extintion...");
-alert("and army of machines wants to play with you 'rock, paper and scissors' as the winners gets full control of the world...");
+alert("Welcome to rock, paper, scissors, lizzard or spock");
+alert("Humanity is in the verge of extintion... we are fighting the Borgs");
+alert("No body knows why, but they have decided to play this game to define who rules the earth.")
 alert("So, our future depends on you...");
 alert("To play, run the command: 'gameRound()' on the console and begin... you have ten rounds... the first to get five points win...");
-alert("So, go on you crazy fucker, we count on you!");
+alert("So, go on, lets defeat the borgs in this final battle!");
 
-let playerScore = 0
-let computerScore= 0
-let roundCount = 0
+let playerScore = 0;
+let computerScore= 0;
+let roundCount = 0;
 
 
 function computerPlay() {
@@ -36,7 +36,7 @@ function computerPlay() {
 }
 
 function playerPlay () {
-    let options = prompt ("Choose your weapon! (rock, paper, scissors, lizard or spock).");
+    let options = prompt ("Choose your weapon! (rock, paper, scissors, lizzard or spock).");
     return options.toUpperCase();
 }
 
@@ -93,17 +93,17 @@ function endGame() {
         (roundCount === 10 && playerScore>computerScore) ||
         (playerScore === 5)) 
         {
-        alert("You won, you sick fuck, YOU WON!");
+        alert("You save the day captain. Live long and prosper.");
     }
     else if (
             ( roundCount === 10 && computerScore>playerScore) ||
             (computerScore===5)) 
             {
-        alert("Shame on your cow, game over for you...defeated by a pc... what a loser...");
+        alert("The Borg now rule this world and they're gonna assimilated us... bip bop bip...resistance is futile...");
     }
     else { 
         roundsLeft = 10 - roundCount;
-        console.log("You have " +roundsLeft + " of rounds left, lets see who wins this game...");
+        console.log("You have " +roundsLeft + " rounds left, lets see who wins this game...");
     }
 }
 function gameRound() {
