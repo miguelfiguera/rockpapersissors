@@ -142,22 +142,22 @@ function rules() {
     console.log(message7);
     console.log(message8);
 } 
-/* Trying to do a loop until one of the "endgame happens"
+
 function tenRounds() {
-while (
-    (roundCount != 10 && playerScore !=5) ||
-    (roundCount != 10 && computerScore!=5)||
-    (roundCount == 10 && playerScore===computerScore)) {
+    do{
     game();
-    console.log( "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".");
+    console.log( "Your score is " + playerScore + " vs " + "computer's score " + computerScore + "."); 
+} while( 
+    (playerScore != 5 && computerScore < 5)||
+    (computerScore != 5 && playerScore< 5) ||
+    (roundCount===10 && playerScore===computerScore));
  }
-}*/
 function reset() { 
     playerScore = 0;
     roundCount = 0;
     computerScore = 0;
     console.log(  "Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".");
-}//in review cause it modifies the global variables at a local point.
+}
 
 function help() {
     let message1="game() plays one round of this game.";
@@ -180,4 +180,4 @@ function suddenDeath() {
      } while( 
         (playerScore != 5 && computerScore < 5)||
         (computerScore != 5 && playerScore< 5));
-}//in review cause it modifies the global variables at a local point.
+}
