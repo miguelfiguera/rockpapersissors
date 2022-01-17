@@ -125,11 +125,13 @@ function help() {
     let message5 = "spock beats scissors and rock...";
     let message6 = "and lizzard poisons spock and eats paper...";
     let message7 = "you have ten rounds, the first team to get to 5 points wins the game";
+    let message8 = "just type game() to begin, and good luck, mon capitane";
     console.log (message1);
     console.log(message2);
     console.log(message3);
     console.log(message4);
     console.log(message5);
     console.log(message6);
-    console.log(message7)
+    console.log(message7);
+    console.log(message8);
 }
