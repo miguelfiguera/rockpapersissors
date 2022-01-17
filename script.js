@@ -13,7 +13,8 @@ console.log("Humanity is in the verge of extintion... we are fighting the Borgs"
 console.log("No body knows why, but they have decided to play this game to define who rules the earth.")
 console.log("So, our future depends on you...");
 console.log("To play, run the command: 'game()' on the console and begin...");
-console.log("if you do not know the rules, you may type 'help()'on the console for an explanation...")
+console.log("if you do not know the rules, you may type 'rules()'on the console for an explanation...")
+console.log("for the list of commands just tipe 'help()'.")
 console.log("So, go on mon capitane, lets defeat the borgs in this final battle!");
 
 let playerScore = 0;
@@ -122,7 +123,7 @@ function game() {
     endGame();
     return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
 }
-function help() {
+function rules() {
     let message1 = "The rules are simple: ";
     let message2 = "Rock smash scissors crushes lizzard,";
     let message3 = "paper disproves spock covers rock,";
@@ -139,4 +140,28 @@ function help() {
     console.log(message6);
     console.log(message7);
     console.log(message8);
+} 
+function tenRounds() {
+let i = 0;
+while (i !=10){
+    game();
+    i++;
+    console.log( "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".");
+ }
+}
+function reset() {
+    let playerScore = 0;
+    let roundCount = 0;
+    let computerScore= 0;
+}
+
+function help() {
+    let message1="game() plays one round of this game.";
+    let message2= "reset() puts the score and the rounds on 0 again.";;
+    let message4= "rules() opens an explanation of how to play 'Rock, Paper, Scissors, Lizzard and Spock.";
+    console.log(message1);
+    console.log(message2);
+    console.log(message3);
+    console.log(message4);
+    
 }
