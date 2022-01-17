@@ -124,10 +124,10 @@ function game() {
 }
 function help() {
     let message1 = "The rules are simple: ";
-    let message2 = "Rock beats scissors and lizzard,";
-    let message3 = "paper beats spock and rock,";
-    let message4 = "scissors beats lizzard and paper,";
-    let message5 = "spock beats scissors and rock...";
+    let message2 = "Rock smash scissors crushes lizzard,";
+    let message3 = "paper disproves spock covers rock,";
+    let message4 = "scissors decapitated lizzard cut paper,";
+    let message5 = "spock smashes scissors fasers rock...";
     let message6 = "and lizzard poisons spock and eats paper...";
     let message7 = "you have ten rounds, the first team to get to 5 points wins the game";
     let message8 = "just type game() to begin, and good luck, mon capitane";
