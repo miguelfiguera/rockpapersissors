@@ -8,7 +8,7 @@
 //4) Determines which is greater than the other.
 //5) shows a message of victory, draw or loss.
 alert("Welcome to rock, paper, scissors, lizzard or spock.");
-alert("Please go to the console with ctrl+alt+C there you will have further instructions.")
+alert("Please go to the console with ctrl+shift+C there you will have further instructions.")
 console.log("Humanity is in the verge of extintion... we are fighting the Borgs");
 console.log("No body knows why, but they have decided to play this game to define who rules the earth.")
 console.log("So, our future depends on you...");
