@@ -7,12 +7,14 @@
 //3) compares both of the variables.
 //4) Determines which is greater than the other.
 //5) shows a message of victory, draw or loss.
-alert("Welcome to rock, paper, scissors, lizzard or spock");
-alert("Humanity is in the verge of extintion... we are fighting the Borgs");
-alert("No body knows why, but they have decided to play this game to define who rules the earth.")
-alert("So, our future depends on you...");
-alert("To play, run the command: 'game()' on the console and begin... you have ten rounds... the first to get five points win...");
-alert("So, go on, lets defeat the borgs in this final battle!");
+alert("Welcome to rock, paper, scissors, lizzard or spock.");
+alert("Please go to the console with ctrl+alt+C there you will have further instructions.")
+console.log("Humanity is in the verge of extintion... we are fighting the Borgs");
+console.log("No body knows why, but they have decided to play this game to define who rules the earth.")
+console.log("So, our future depends on you...");
+console.log("To play, run the command: 'game()' on the console and begin...");
+console.log("if you do not know the rules, you may type 'help()'on the console for an explanation...")
+console.log("So, go on mon capitane, lets defeat the borgs in this final battle!");
 
 let playerScore = 0;
 let computerScore= 0;
@@ -122,10 +124,12 @@ function help() {
     let message4 = "scissors beats lizzard and paper,";
     let message5 = "spock beats scissors and rock...";
     let message6 = "and lizzard poisons spock and eats paper...";
+    let message7 = "you have ten rounds, the first team to get to 5 points wins the game";
     console.log (message1);
     console.log(message2);
     console.log(message3);
     console.log(message4);
     console.log(message5);
     console.log(message6);
+    console.log(message7)
 }
