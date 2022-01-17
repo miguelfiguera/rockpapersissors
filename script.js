@@ -11,7 +11,7 @@ alert("Welcome to rock, paper, scissors, lizzard or spock");
 alert("Humanity is in the verge of extintion... we are fighting the Borgs");
 alert("No body knows why, but they have decided to play this game to define who rules the earth.")
 alert("So, our future depends on you...");
-alert("To play, run the command: 'gameRound()' on the console and begin... you have ten rounds... the first to get five points win...");
+alert("To play, run the command: 'game()' on the console and begin... you have ten rounds... the first to get five points win...");
 alert("So, go on, lets defeat the borgs in this final battle!");
 
 let playerScore = 0;
@@ -26,11 +26,11 @@ function computerPlay() {
             return "ROCK"
         case 1:
             return "PAPER"
-        case 3: 
+        case 2: 
             return "SCISSORS"
-        case 4:
+        case 3:
             return "SPOCK"
-        case 5:
+        case 4:
             return "LIZZARD"
     }
 }
@@ -61,6 +61,7 @@ function comparingResults() {
         roundCount++;
         playerScore++;
         alert("You won!");
+        console.log("you won!");
 }    
  else if (
     (computerSelection==="ROCK" && playerSelection === "SCISSORS") ||
@@ -76,12 +77,14 @@ function comparingResults() {
     ){ 
         roundCount++;
         computerScore++;
-        alert("Shame on your cow, you lose...") 
+        alert("We are one step closer to assimilated you...");
+        console.log("You lose...this round.") 
     }
     else {
         roundCount++;
         alert("This is a draw...");
     }
+    console.log("The Borg have choseen: " + computerSelection);
     return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
 }
 
@@ -106,9 +109,23 @@ function endGame() {
         console.log("You have " +roundsLeft + " rounds left, lets see who wins this game...");
     }
 }
-function gameRound() {
+function game() {
     comparingResults();
     console.log("this is the round number " + roundCount); 
     endGame();
     return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
+}
+function help() {
+    let message1 = "The rules are simple: ";
+    let message2 = "Rock beats scissors and lizzard,";
+    let message3 = "paper beats spock and rock,";
+    let message4 = "scissors beats lizzard and paper,";
+    let message5 = "spock beats scissors and rock...";
+    let message6 = "and lizzard poisons spock and eats paper...";
+    console.log (message1);
+    console.log(message2);
+    console.log(message3);
+    console.log(message4);
+    console.log(message5);
+    console.log(message6);
 }
