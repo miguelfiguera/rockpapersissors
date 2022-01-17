@@ -20,7 +20,7 @@ let roundCount = 0
 
 
 function computerPlay() {
-    let selection = Math.floor(Math.random()*3);
+    let selection = Math.floor(Math.random()*5);
     switch (selection) {
         case 0 :
             return "ROCK"
@@ -28,11 +28,15 @@ function computerPlay() {
             return "PAPER"
         case 3: 
             return "SCISSORS"
+        case 4:
+            return "SPOCK"
+        case 5:
+            return "LIZZARD"
     }
 }
 
 function playerPlay () {
-    let options = prompt ("Choose your weapon! (rock, paper or scissors).");
+    let options = prompt ("Choose your weapon! (rock, paper, scissors, lizard or spock).");
     return options.toUpperCase();
 }
 
@@ -43,9 +47,16 @@ function comparingResults() {
     let playerSelection = playerPlay();
     
     if (
-        (playerSelection==="ROCK" && computerSelection==="SCISSORS") || 
+        (playerSelection==="ROCK" && computerSelection==="SCISSORS")||
+        (playerSelection=== "ROCK" && computerSelection=== "LIZZARD") || 
         (playerSelection==="SCISSORS" && computerSelection==="PAPER") ||
-        (playerSelection==="PAPER" && computerSelection==="ROCK" )
+        (playerSelection=== "SCISSORS" && computerSelection=== "LIZZARD")||
+        (playerSelection==="PAPER" && computerSelection==="SPOCK")||
+        (playerSelection==="PAPER" && computerSelection==="ROCK" )||
+        (playerSelection==="SPOCK" && computerSelection==="ROCK")||
+        (playerSelection=== "SPOCK" && computerSelection==="SCISSORS")||
+        (playerSelection==="LIZZARD" && computerSelection=== "SPOCK")||
+        (playerSelection=== "LIZZARD" && computerSelection==="PAPER")
     ){ 
         roundCount++;
         playerScore++;
@@ -53,8 +64,15 @@ function comparingResults() {
 }    
  else if (
     (computerSelection==="ROCK" && playerSelection === "SCISSORS") ||
-    (computerSelection === "SCISSORS" && playerSelection === "PAPER") ||
-    (computerSelection=== "PAPER" && playerSelection === "ROCK") 
+    (computerSelection==="ROCK" && playerSelection === "LIZZARD") ||
+    (computerSelection==="SCISSORS" && playerSelection === "PAPER") ||
+    (computerSelection==="SCISSORS" && playerSelection === "LIZZARD") ||
+    (computerSelection==="PAPER" && playerSelection === "ROCK") ||
+    (computerSelection==="PAPER" && playerSelection === "SPOCK") ||
+    (computerSelection==="LIZZARD" && playerSelection === "SPOCK") ||
+    (computerSelection==="LIZZARD" && playerSelection === "PAPER") ||
+    (computerSelection === "SPOCK" && playerSelection === "ROCK") ||
+    (computerSelection=== "SPOCK" && playerSelection === "SCISSORS") 
     ){ 
         roundCount++;
         computerScore++;
