@@ -1,0 +1,54 @@
+* { 
+    box-sizing: border-box;
+}
+div#general-container {
+    background-color: white; 
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    height: auto;
+    min-width: 960px;
+    gap: 10px; /*para eliminar más tarde*/
+    
+    /* this goes black, it is white to see all the needed information.*/
+}
+
+div.header {
+    grid-column: 1/13;
+    grid-row: 1/2;
+    color: white;
+    background-color: black;
+}
+
+div.messages {
+    grid-column: 1/4;
+    grid-row: 2/6;
+    background-color: black;
+
+}
+
+div.other-commands {
+    grid-column: 10/13;
+    grid-row: 2/6;
+    background-color: black;
+
+}
+
+div.battlefield {
+    grid-column: 4/10;
+    grid-row: 2/6;
+    background-color: black;
+}
+
+div.options {
+    display: grid;
+    grid-column: 1/13;
+    grid-row: 6/8;
+    background-color: black;
+}
+
+div.footer {
+    grid-column: 1/13;
+    grid-row: 8/9;
+    background-color: black;
+}

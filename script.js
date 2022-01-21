@@ -1,12 +1,4 @@
-//Rock paper sissors:
-//define variables
-//define functions mini: playerinput / computerinput / compare selection / show message
-//0) the game starts...
-//1) Players input an option.
-//2) Computer selects an option.
-//3) compares both of the variables.
-//4) Determines which is greater than the other.
-//5) shows a message of victory, draw or loss.
+/*
 alert("Welcome to rock, paper, scissors, lizzard or spock.");
 alert("Please go to the console with ctrl+shift+C there you will have further instructions.")
 console.log("Humanity is in the verge of extintion... we are fighting the Borgs");
@@ -15,7 +7,7 @@ console.log("So, our future depends on you...");
 console.log("To play, run the command: 'game()' on the console and begin...");
 console.log("if you do not know the rules, you may type 'rules()'on the console for an explanation...")
 console.log("for the list of commands just tipe 'help()'.")
-console.log("So, go on mon capitane, lets defeat the borgs in this final battle!");
+console.log("So, go on mon capitane, lets defeat the borgs in this final battle!");*/
 
 let playerScore = 0;
 let computerScore= 0;
