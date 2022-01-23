@@ -173,3 +173,13 @@ function suddenDeath() {
         (playerScore != 5 && computerScore < 5)||
         (computerScore != 5 && playerScore< 5));
 }
+// Here starts the event, style and form using javascript. 
+
+//Header 
+document.getElementsByClassName("header");
+let header = document.getElementsByClassName("header");
+let h1 = document.createElement ("h1");
+header[0].appendChild(h1);
+h1.innerText = "Rock, Paper, Scissors, Lizzard and Spock.";
+h1.style.color = "white";
+h1.style.textAlign = "center";

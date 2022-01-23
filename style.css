@@ -17,7 +17,7 @@ div.header {
     grid-column: 1/13;
     grid-row: 1/2;
     color: white;
-    background-color: black;
+    background-color: rgb(32, 28, 28);
 }
 
 div.messages {
