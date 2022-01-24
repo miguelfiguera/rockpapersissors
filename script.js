@@ -175,6 +175,9 @@ function suddenDeath() {
 }
 // Here starts the event, style and form using javascript. 
 
+//Styling const:
+const BACKGROUNDCOLOR = "#201c1c";
+
 //Header 
 document.getElementsByClassName("header");
 let header = document.getElementsByClassName("header");
@@ -183,3 +186,22 @@ header[0].appendChild(h1);
 h1.innerText = "Rock, Paper, Scissors, Lizzard and Spock.";
 h1.style.color = "white";
 h1.style.textAlign = "center";
+h1.style.fontFamily = "Atari"; //working on this one
+
+//Commands right panel
+
+
+
+
+
+
+
+
+//footer
+document.getElementsByClassName("footer");
+let footer= document.getElementsByClassName ("footer");
+let h5 = document.createElement ("h5");
+footer[0].appendChild(h5);
+h5.innerText = "Copyright: Captain Perrosaurio 2022.";
+h5.style.color = "white";
+h5.style.textAlign = "center";
