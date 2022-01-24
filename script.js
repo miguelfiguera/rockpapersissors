@@ -1,6 +1,6 @@
 /*
 alert("Welcome to rock, paper, scissors, lizzard or spock.");
-alert("Please go to the console with ctrl+shift+C there you will have further instructions.")
+alert("Please read your Console-Log on the left panel, there you will have further instructions.")
 console.log("Humanity is in the verge of extintion... we are fighting the Borgs");
 console.log("No body knows why, but they have decided to play this game to define who rules the earth.")
 console.log("So, our future depends on you...");
@@ -31,9 +31,25 @@ function computerPlay() {
 }
 
 function playerPlay () {
-    let options = prompt ("Choose your weapon! (rock, paper, scissors, lizzard or spock).");
-    return options.toUpperCase();
-}
+    //let options = prompt ("Choose your weapon! (rock, paper, scissors, lizzard or spock).");
+    if (spockButton.onclick) {
+        playerSelection= "spock";
+    }
+    else if (rockButton.onclick) {
+        playerSelection= "rock";
+    }
+    else if (lizzardButton.onclick) {
+        playerSelection = "lizzard";
+    }
+    else if (paperButton.onclick) {
+        playerSelection="paper";
+
+    }
+    else if (scissorsButton.onclick){
+        playerSelection="scissors";
+    }
+    console.log(  playerSelection.toUpperCase());
+} //not working yet
 
 
 function comparingResults() { 
@@ -142,7 +158,7 @@ function tenRounds() {
 } while( 
     (playerScore != 5 && computerScore < 5)||
     (computerScore != 5 && playerScore< 5) ||
-    (roundCount===10 && playerScore===computerScore));
+    (roundCount >=10 && playerScore===computerScore));
  }
 function reset() { 
     playerScore = 0;
@@ -231,10 +247,15 @@ rightPanelTitle.style.border="0px";
 let leftPanel=document.getElementsByClassName("messages");
 let h4=document.createElement ("h4");
 let innerDivLeftPanel=document.createElement ("div");
+let textDiv=document.createElement("div");
 h4.innerText="CONSOLE-LOG";
 h4.style.color = "white";
 h4.style.textAlign= "center";
-leftPanel[0].appendChild(h4);
+leftPanel[0].appendChild(innerDivLeftPanel);
+innerDivLeftPanel.appendChild(h4);
+innerDivLeftPanel.appendChild(textDiv);
+//I need to display the help and rule messages on the textDiv.
+
 
 
 //Options panel:
