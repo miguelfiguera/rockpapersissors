@@ -17,7 +17,7 @@ div.header {
     grid-column: 1/13;
     grid-row: 1/2;
     color: white;
-    background-color: rgb(32, 28, 28);
+    background-color: #201c1c;
 }
 
 div.messages {
@@ -41,7 +41,6 @@ div.battlefield {
 }
 
 div.options {
-    display: grid;
     grid-column: 1/13;
     grid-row: 6/8;
     background-color: black;

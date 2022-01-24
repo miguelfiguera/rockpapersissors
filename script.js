@@ -186,16 +186,79 @@ header[0].appendChild(h1);
 h1.innerText = "Rock, Paper, Scissors, Lizzard and Spock.";
 h1.style.color = "white";
 h1.style.textAlign = "center";
-h1.style.fontFamily = "Atari"; //working on this one
+h1.style.fontFamily = "Atari"; //working on this
 
-//Commands right panel
+//right panel: "commands"
+
+document.getElementsByClassName("other-commands");
+let rightPanel= document.getElementsByClassName("other-commands");
+let rightPanelTitle= document.createElement("h5");
+rightPanelTitle.innerText= "COMMANDS";
+rightPanelTitle.style.color= "white";
+rightPanelTitle.style.textAlign="center";
+let innerDivRightPanel = document.createElement("div");
+let buttonHelp= document.createElement ("button");
+let buttonSuddenDeath = document.createElement ("button");
+let buttonRules= document.createElement("button");
+let buttonReset = document.createElement ("button");
+buttonHelp.innerText = "Help";
+buttonSuddenDeath.innerText= "Sudden Death";
+buttonRules.innerText = "Rules";
+buttonReset.innerText = "Reset";
+rightPanel[0].appendChild(rightPanelTitle);
+innerDivRightPanel.appendChild(buttonHelp);
+innerDivRightPanel.appendChild(buttonSuddenDeath);
+innerDivRightPanel.appendChild(buttonRules);
+innerDivRightPanel.appendChild(buttonReset);
+rightPanel[0].appendChild(innerDivRightPanel);
+innerDivRightPanel.style.display= "flex";
+innerDivRightPanel.style.flexDirection = "column";
+innerDivRightPanel.style.flexWrap= "wrap";
+innerDivRightPanel.style.justifyContent = "space-evenly";
+innerDivRightPanel.style.height = "400px";
+innerDivRightPanel.style.width = "250px";
+innerDivRightPanel.style.alignContent = "center";
+innerDivRightPanel.style.alignSelf = "center";
 
 
+//Left panel: Dashboard Messages:
 
 
-
-
-
+//Options panel:
+let optionsPanel = document.getElementsByClassName("options");
+let optionsDiv = document.getElementsByClassName("the");
+let rock = optionsDiv[0];
+let paper = optionsDiv[1];
+let spock= optionsDiv[4];
+let scissors= optionsDiv[2];
+let lizzard = optionsDiv[3];
+let spockButton= document.createElement("button");
+let rockButton=document.createElement("button");
+let lizzardButton=document.createElement("button");
+let paperButton=document.createElement("button");
+let scissorsButton=document.createElement("button");
+spockButton.innerText = "Spock";
+lizzardButton.innerText = "Lizzard";
+paperButton.innerText = "Paper";
+scissorsButton.innerText = "Scissors";
+rockButton.innerText="Rock";
+rock.appendChild(rockButton);
+paper.appendChild(paperButton);
+scissors.appendChild(scissorsButton);
+spock.appendChild(spockButton);
+lizzard.appendChild(lizzardButton); 
+optionsPanel[0].style.display = "flex";
+optionsPanel[0].style.justifyContent ="space-evenly";
+spockButton.style.width= "150px";
+spockButton.style.height= "150px";
+rockButton.style.width= "150px";
+rockButton.style.height= "150px";
+paperButton.style.width= "150px";
+paperButton.style.height= "150px";
+lizzardButton.style.width= "150px";
+lizzardButton.style.height= "150px";
+scissorsButton.style.width= "150px";
+scissorsButton.style.height= "150px";
 
 //footer
 document.getElementsByClassName("footer");
