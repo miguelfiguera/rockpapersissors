@@ -23,31 +23,31 @@ div.header {
 div.messages {
     grid-column: 1/4;
     grid-row: 2/6;
-    background-color: black;
+    background-color: #201c1c;
 
 }
 
 div.other-commands {
     grid-column: 10/13;
     grid-row: 2/6;
-    background-color: black;
+    background-color: #201c1c;
 
 }
 
 div.battlefield {
     grid-column: 4/10;
     grid-row: 2/6;
-    background-color: black;
+    background-color: #201c1c;
 }
 
 div.options {
     grid-column: 1/13;
     grid-row: 6/7;
-    background-color: black;
+    background-color: #201c1c;
 }
 
 div.footer {
     grid-column: 1/13;
     grid-row: 7/8;
-    background-color: black;
+    background-color: #201c1c;
 }

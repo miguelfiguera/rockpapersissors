@@ -228,6 +228,13 @@ rightPanelTitle.style.border="0px";
 
 
 //Left panel: Dashboard Messages:
+let leftPanel=document.getElementsByClassName("messages");
+let h4=document.createElement ("h4");
+let innerDivLeftPanel=document.createElement ("div");
+h4.innerText="CONSOLE-LOG";
+h4.style.color = "white";
+h4.style.textAlign= "center";
+leftPanel[0].appendChild(h4);
 
 
 //Options panel:
