@@ -192,7 +192,7 @@ h1.style.fontFamily = "Atari"; //working on this
 
 document.getElementsByClassName("other-commands");
 let rightPanel= document.getElementsByClassName("other-commands");
-let rightPanelTitle= document.createElement("h5");
+let rightPanelTitle= document.createElement("h4");
 rightPanelTitle.innerText= "COMMANDS";
 rightPanelTitle.style.color= "white";
 rightPanelTitle.style.textAlign="center";
@@ -211,14 +211,20 @@ innerDivRightPanel.appendChild(buttonSuddenDeath);
 innerDivRightPanel.appendChild(buttonRules);
 innerDivRightPanel.appendChild(buttonReset);
 rightPanel[0].appendChild(innerDivRightPanel);
+rightPanel[0].style.display= "flex";
+rightPanel[0].style.flexDirection= "column";
+rightPanel[0].style.justifyContent = "center";
 innerDivRightPanel.style.display= "flex";
 innerDivRightPanel.style.flexDirection = "column";
 innerDivRightPanel.style.flexWrap= "wrap";
 innerDivRightPanel.style.justifyContent = "space-evenly";
-innerDivRightPanel.style.height = "400px";
+innerDivRightPanel.style.height = "300px";
 innerDivRightPanel.style.width = "250px";
 innerDivRightPanel.style.alignContent = "center";
 innerDivRightPanel.style.alignSelf = "center";
+rightPanelTitle.style.marginTop= "10px";
+rightPanelTitle.style.marginBottom= "0px";
+rightPanelTitle.style.border="0px";
 
 
 //Left panel: Dashboard Messages:
@@ -250,15 +256,25 @@ lizzard.appendChild(lizzardButton);
 optionsPanel[0].style.display = "flex";
 optionsPanel[0].style.justifyContent ="space-evenly";
 spockButton.style.width= "150px";
-spockButton.style.height= "150px";
+spockButton.style.height= "100px";
 rockButton.style.width= "150px";
-rockButton.style.height= "150px";
+rockButton.style.height= "100px";
 paperButton.style.width= "150px";
-paperButton.style.height= "150px";
+paperButton.style.height= "100px";
 lizzardButton.style.width= "150px";
-lizzardButton.style.height= "150px";
+lizzardButton.style.height= "100px";
 scissorsButton.style.width= "150px";
-scissorsButton.style.height= "150px";
+scissorsButton.style.height= "100px";
+rockButton.style.borderRadius = "25px";
+spockButton.style.borderRadius = "25px";
+paperButton.style.borderRadius = "25px";
+lizzardButton.style.borderRadius = "25px";
+scissorsButton.style.borderRadius = "25px";
+optionsDiv[0].style.margin = "20px";
+optionsDiv[1].style.margin = "20px";
+optionsDiv[2].style.margin = "20px";
+optionsDiv[3].style.margin = "20px";
+optionsDiv[4].style.margin = "20px";
 
 //footer
 document.getElementsByClassName("footer");
