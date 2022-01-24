@@ -31,32 +31,17 @@ function computerPlay() {
 }
 
 function playerPlay () {
-    //let options = prompt ("Choose your weapon! (rock, paper, scissors, lizzard or spock).");
-    if (spockButton.onclick) {
-        playerSelection= "spock";
-    }
-    else if (rockButton.onclick) {
-        playerSelection= "rock";
-    }
-    else if (lizzardButton.onclick) {
-        playerSelection = "lizzard";
-    }
-    else if (paperButton.onclick) {
-        playerSelection="paper";
-
-    }
-    else if (scissorsButton.onclick){
-        playerSelection="scissors";
-    }
-    console.log(  playerSelection.toUpperCase());
-} //not working yet
+    /*let options = prompt ("Choose your weapon! (rock, paper, scissors, lizzard or spock).");
+    return  playerSelection.toUpperCase();*/
+ //not working yet 
+}
 
 
 function comparingResults() { 
     computerPlay();
-    let computerSelection = computerPlay();
-    let playerSelection = playerPlay();
-    
+    let computerSelection = computerPlay();  
+    let playerSelection=playerPlay();
+
     if (
         (playerSelection==="ROCK" && computerSelection==="SCISSORS")||
         (playerSelection=== "ROCK" && computerSelection=== "LIZZARD") || 
@@ -303,6 +288,12 @@ optionsDiv[1].style.margin = "20px";
 optionsDiv[2].style.margin = "20px";
 optionsDiv[3].style.margin = "20px";
 optionsDiv[4].style.margin = "20px";
+/*spockButton.onclick = () => {playerSelection = "SPOCK";  ; }
+paperButton.onclick= () =>{playerSelection = "PAPER";  }
+lizzardButton.onclick= () =>{playerSelection = "LIZZARD";
+rockButton.onclick= () =>{playerSelection = "ROCK"; 
+scissorsButton.onclick= () =>{playerSelection = "SCISSORS"; */
+
 
 //footer
 document.getElementsByClassName("footer");
