@@ -244,15 +244,14 @@ battlefieldDiv.appendChild(computerScoreCont);
 battlefieldDiv.appendChild(yourScoreCont);
 battlefield[0].appendChild(battlefieldDiv);
 battlefield[0].style.display = "flex";
-battlefield[0].style.flexDirection ="column-reverse";
 battlefieldDiv.style.flexDirection = "row-reverse";
 battlefieldDiv.style.height = "100px";
-battlefieldDiv.style.width = "475px";
+battlefieldDiv.style.flex= "1";
 yourScoreCont.innerText = "Your Score is: " + playerScore;
 computerScoreCont.innerText = "Borg's Score is: " + computerScore;
 battlefieldDiv.style.color = "white";
 battlefieldDiv.style.alignContent= "flex-end";
-battlefieldDiv.style.justifyContent= "space-between";
+battlefieldDiv.style.justifyContent= "space-evenly";
 yourScoreCont.style.height= "100px";
 computerScoreCont.style.height = "100px";
 
