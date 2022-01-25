@@ -30,18 +30,10 @@ function computerPlay() {
     }
 }
 
-function playerPlay () {
-    /*let options = prompt ("Choose your weapon! (rock, paper, scissors, lizzard or spock).");
-    return  playerSelection.toUpperCase();*/
- //not working yet 
-}
-
 
 function comparingResults() { 
     computerPlay();
     let computerSelection = computerPlay();  
-    let playerSelection=playerPlay();
-
     if (
         (playerSelection==="ROCK" && computerSelection==="SCISSORS")||
         (playerSelection=== "ROCK" && computerSelection=== "LIZZARD") || 
@@ -124,8 +116,8 @@ function rules() {
     let message4 = "scissors decapitated lizzard and cut paper,";
     let message5 = "spock smashes scissors and fasers rock...";
     let message6 = "and lizzard poisons spock and eats paper...";
-    let message7 = "you have ten rounds, the first team to get to 5 points wins the game";
-    let message8 = "just type game() to begin, and good luck, mon capitane";
+    let message7 = "you have ten rounds, the first team to get to 5 points wins the game.";
+    let message8 = "The fate of the humans is on your hands, good luck, mon capitane";
     console.log (message1);
     console.log(message2);
     console.log(message3);
@@ -136,7 +128,7 @@ function rules() {
     console.log(message8);
 } 
 
-function tenRounds() {
+/*function tenRounds() {
     do{
     game();
     console.log( "Your score is " + playerScore + " vs " + "computer's score " + computerScore + "."); 
@@ -144,7 +136,7 @@ function tenRounds() {
     (playerScore != 5 && computerScore < 5)||
     (computerScore != 5 && playerScore< 5) ||
     (roundCount >=10 && playerScore===computerScore));
- }
+ }*/
 function reset() { 
     playerScore = 0;
     roundCount = 0;
@@ -241,7 +233,28 @@ innerDivLeftPanel.appendChild(h4);
 innerDivLeftPanel.appendChild(textDiv);
 //I need to display the help and rule messages on the textDiv.
 
+// Battlefield...
 
+let battlefield= document.getElementsByClassName("battlefield");
+let battlefieldDiv=document.createElement ("div");
+let yourScoreCont= document.createElement ("p");
+let computerScoreCont= document.createElement("p");
+battlefieldDiv.style.display = "flex";
+battlefieldDiv.appendChild(computerScoreCont);
+battlefieldDiv.appendChild(yourScoreCont);
+battlefield[0].appendChild(battlefieldDiv);
+battlefield[0].style.display = "flex";
+battlefield[0].style.flexDirection ="column-reverse";
+battlefieldDiv.style.flexDirection = "row-reverse";
+battlefieldDiv.style.height = "100px";
+battlefieldDiv.style.width = "475px";
+yourScoreCont.innerText = "Your Score is: " + playerScore;
+computerScoreCont.innerText = "Borg's Score is: " + computerScore;
+battlefieldDiv.style.color = "white";
+battlefieldDiv.style.alignContent= "flex-end";
+battlefieldDiv.style.justifyContent= "space-between";
+yourScoreCont.style.height= "100px";
+computerScoreCont.style.height = "100px";
 
 //Options panel:
 let optionsPanel = document.getElementsByClassName("options");
@@ -288,11 +301,6 @@ optionsDiv[1].style.margin = "20px";
 optionsDiv[2].style.margin = "20px";
 optionsDiv[3].style.margin = "20px";
 optionsDiv[4].style.margin = "20px";
-/*spockButton.onclick = () => {playerSelection = "SPOCK";  ; }
-paperButton.onclick= () =>{playerSelection = "PAPER";  }
-lizzardButton.onclick= () =>{playerSelection = "LIZZARD";
-rockButton.onclick= () =>{playerSelection = "ROCK"; 
-scissorsButton.onclick= () =>{playerSelection = "SCISSORS"; */
 
 
 //footer
@@ -303,3 +311,17 @@ footer[0].appendChild(h5);
 h5.innerText = "Copyright: Captain Perrosaurio 2022.";
 h5.style.color = "white";
 h5.style.textAlign = "center";
+
+//button Options Panel functions
+spockButton.onclick = () => {playerSelection="SPOCK"; game();}
+rockButton.onclick = () => {playerSelection="ROCK"; game();}
+lizzardButton.onclick = () => {playerSelection="LIZZARD"; game();}
+paperButton.onclick = () => {playerSelection="PAPER"; game();}
+scissorsButton.onclick = () => {playerSelection="SCISSORS"; game();}
+
+
+//buttons Right Panel
+buttonHelp.onclick = () => {help();}
+buttonReset.onclick = () => {reset();}
+buttonRules.onclick = () => {rules();}
+buttonSuddenDeath.onclick = () => {suddenDeath();}
