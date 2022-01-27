@@ -250,16 +250,44 @@ battlefieldDiv.appendChild(pcOptionsSquare);
 battlefield[0].appendChild(battlefieldDiv);
 battlefield[0].appendChild(billboard);
 battlefield[0].style.display = "flex";
-battlefieldDiv.style.flexDirection = "row-reverse";
-battlefieldDiv.style.height = "100px";
-battlefieldDiv.style.flex= "1";
+battlefield[0].style.flexDirection = "row";
+battlefield[0].style.flexWrap = "wrap";
+battlefield[0].style.justifyContent = "center";
+billboard.innerText = "Choose your weapon!";
+billboard.style.color = "white";
+billboard.style.flexBasis= "500px";
+billboard.style.maxHeight="100px";
+billboard.style.order= "1";
+billboard.style.textAlign= "center";
+battlefieldDiv.style.display = "flex";
+battlefieldDiv.style.flexDirection = "row";
+battlefieldDiv.style.flexWrap = "wrap";
+battlefieldDiv.style.order= "2";
 yourScoreCont.innerText = "Your Score is: " + playerScore;
 computerScoreCont.innerText = "Borg's Score is: " + computerScore;
 battlefieldDiv.style.color = "white";
-battlefieldDiv.style.alignContent= "flex-end";
+battlefieldDiv.style.alignContent= "center";
 battlefieldDiv.style.justifyContent= "space-evenly";
 yourScoreCont.style.height= "100px";
 computerScoreCont.style.height = "100px";
+pcOptionsSquare.style.width = "250px";
+pcOptionsSquare.style.height= "250px";
+pcOptionsSquare.style.borderRadius = "25px";
+pcOptionsSquare.style.border= "2px";
+pcOptionsSquare.style.borderStyle = "solid";
+pcOptionsSquare.style.margin= "10px";
+playerOptionsSquare.style.width = "250px";
+playerOptionsSquare.style.height = "250px";
+playerOptionsSquare.style.border= "2px";
+playerOptionsSquare.style.borderRadius = "25px";
+playerOptionsSquare.style.borderStyle = "solid";
+playerOptionsSquare.style.margin = "10px";
+//layout of the battlefield
+pcOptionsSquare.style.order = "2";
+playerOptionsSquare.style.order = "1";
+yourScoreCont.style.order = "3";
+computerScoreCont.style.order = "4";
+
 
 //Options panel:
 let optionsPanel = document.getElementsByClassName("options");
