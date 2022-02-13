@@ -1,11 +1,12 @@
-/*
-alert("Welcome to rock, paper, scissors, lizzard or spock.");
+/*alert("Welcome to rock, paper, scissors, lizzard or spock.");
 alert("Humanity is in the verge of extintion... we are fighting the Borgs");
 alert("No body knows why, but they have decided to play this game to define who rules the earth.")
-alert("To play, just choose your weapon!);
-alert("if you additional guidance please use the commands on your right...")
-*/
+alert("To play, just choose your weapon!");
+alert("if you additional guidance please use the commands on your right...");*/
 
+
+
+//The functions!
 let playerScore = 0;
 let computerScore= 0;
 let roundCount = 0;
@@ -208,7 +209,9 @@ function suddenDeath() {
     }
 
 
-// Here starts the event, style and form using javascript. 
+// Here starts the event, style and form using javascript
+//Lets comment that I know this is not the tool, but I did this as an excersise,
+// and I'm happy with the results.
 
 //Styling const:
 const BACKGROUNDCOLOR = "#201c1c";
