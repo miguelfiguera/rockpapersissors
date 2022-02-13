@@ -356,6 +356,18 @@ let imgPlayer = document.createElement("img");
 let imgComputer= document.createElement("img");
 playerOptionsSquare.appendChild(imgPlayer);
 pcOptionsSquare.appendChild(imgComputer);
+imgPlayer.src="./images/enterprise.jpg";
+imgPlayer.style.borderRadius = "25px";
+imgPlayer.style.width="246px";
+imgPlayer.style.height="246px";
+imgPlayer.style.justifySelf="center";
+imgPlayer.style.border = "0px";
+imgComputer.src="./images/theborgs.jpg";
+imgComputer.style.borderRadius="25px";
+imgComputer.style.width="246px";
+imgComputer.style.height="246px";
+//I was unable to center this images on the square for them...
+
 
 //layout of the battlefield
 pcOptionsSquare.style.order = "2";
@@ -421,11 +433,11 @@ h5.style.color = "white";
 h5.style.textAlign = "center";
 
 //button Options Panel functions
-spockButton.onclick = () => {playerSelection="SPOCK"; game();}
-rockButton.onclick = () => {playerSelection="ROCK"; game();}
-lizzardButton.onclick = () => {playerSelection="LIZZARD"; game();}
-paperButton.onclick = () => {playerSelection="PAPER"; game();}
-scissorsButton.onclick = () => {playerSelection="SCISSORS"; game();}
+spockButton.onclick = () => {playerSelection="SPOCK"; game();imgPlayer.src="./images/spock.jpg";}
+rockButton.onclick = () => {playerSelection="ROCK"; game();imgPlayer.src="./images/rock.jpg";}
+lizzardButton.onclick = () => {playerSelection="LIZZARD"; game();imgPlayer.src="./images/juana la iguana.jpg";}
+paperButton.onclick = () => {playerSelection="PAPER"; game();imgPlayer.src="./images/paper.jpg";}
+scissorsButton.onclick = () => {playerSelection="SCISSORS"; game();imgPlayer.src="./images/scissors.jpg";}
 
 
 //buttons Right Panel
