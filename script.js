@@ -1,13 +1,10 @@
 /*
 alert("Welcome to rock, paper, scissors, lizzard or spock.");
-alert("Please read your Console-Log on the left panel, there you will have further instructions.")
-console.log("Humanity is in the verge of extintion... we are fighting the Borgs");
-console.log("No body knows why, but they have decided to play this game to define who rules the earth.")
-console.log("So, our future depends on you...");
-console.log("To play, run the command: 'game()' on the console and begin...");
-console.log("if you do not know the rules, you may type 'rules()'on the console for an explanation...")
-console.log("for the list of commands just tipe 'help()'.")
-console.log("So, go on mon capitane, lets defeat the borgs in this final battle!");*/
+alert("Humanity is in the verge of extintion... we are fighting the Borgs");
+alert("No body knows why, but they have decided to play this game to define who rules the earth.")
+alert("To play, just choose your weapon!);
+alert("if you additional guidance please use the commands on your right...")
+*/
 
 let playerScore = 0;
 let computerScore= 0;
@@ -28,7 +25,6 @@ function computerPlay() {
             return "LIZZARD"
     }
 }
-
 
 function comparingResults() { 
     computerPlay();
@@ -51,7 +47,7 @@ function comparingResults() {
         theTextLog0.innerText= "You won!";
         theTextLog1.innerText= "This is the round number: " + roundCount;
         theTextLog2.innerText= "Only " + theRoundsLeft + " rounds left...";
-        theTextLog3.innerText="";
+        theTextLog3.innerText= "";
         theTextLog4.innerText="";
         theTextLog5.innerText="";
         theTextLog6.innerText="";
@@ -59,6 +55,7 @@ function comparingResults() {
         console.log("you won!");
         yourScoreCont.innerText = "Your Score is: " + playerScore;
         computerScoreCont.innerText = "Borg's Score is: " + computerScore;        
+        return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
 
 }    
  else if (
@@ -87,6 +84,7 @@ function comparingResults() {
         yourScoreCont.innerText = "Your Score is: " + playerScore;
         computerScoreCont.innerText = "Borg's Score is: " + computerScore;
         console.log("You lose...this round.") 
+        return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
     }
     else {
         roundCount++;
@@ -94,18 +92,17 @@ function comparingResults() {
         theTextLog0.innerText= "This is a draw...";
         theTextLog1.innerText= "This is the round number: " + roundCount;
         theTextLog2.innerText= "Only " + theRoundsLeft + " rounds left...";
-        theTextLog3.innerText="";
+        theTextLog3.innerText= "";
         theTextLog4.innerText="";
         theTextLog5.innerText="";
         theTextLog6.innerText="";
         theTextLog7.innerText=""; 
         yourScoreCont.innerText = "Your Score is: " + playerScore;
         computerScoreCont.innerText = "Borg's Score is: " + computerScore;
+        return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
 
     }
-    console.log ("You have choseen: " + playerSelection);
-    console.log("The Borg have choseen: " + computerSelection);
-    return "Your score is " + playerScore + " vs " + "computer's score " + computerScore + ".";
+
 }
 
 function endGame() {
@@ -149,14 +146,6 @@ function rules() {
     let message6 = "5) And lizzard poisons spock and eats paper...";
     let message7 = "6) You have ten rounds, the first team to get to 5 points wins the game.";
     let message8 = "The fate of the humans is on your hands, good luck, Mon Capitane";
-    console.log (message1);
-    console.log(message2);
-    console.log(message3);
-    console.log(message4);
-    console.log(message5);
-    console.log(message6);
-    console.log(message7);
-    console.log(message8);
     theTextLog0.innerText= message1
     theTextLog1.innerText= message2
     theTextLog2.innerText= message3
@@ -171,15 +160,6 @@ function rules() {
     
 }
 
-/*function tenRounds() {
-    do{
-    game();
-    console.log( "Your score is " + playerScore + " vs " + "computer's score " + computerScore + "."); 
-} while( 
-    (playerScore != 5 && computerScore < 5)||
-    (computerScore != 5 && playerScore< 5) ||
-    (roundCount >=10 && playerScore===computerScore));
- }*/
 function reset() { 
     playerScore = 0;
     roundCount = 0;
@@ -192,18 +172,15 @@ function reset() {
     theTextLog5.innerText="";
     theTextLog6.innerText="";
     theTextLog7.innerText="";
-    console.log(  "Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".");
+    yourScoreCont.innerText = "Your Score is: " + playerScore;
+    computerScoreCont.innerText = "Borg's Score is: " + computerScore;
 }
 
 function help() {
-    let message1="game plays one round of this game.";
+    let message1="Choose any option to play one round of this game.";
     let message2= "reset puts the score and the rounds on 0 again.";
     let message4= "rules opens an explanation of how to play 'Rock, Paper, Scissors, Lizzard and Spock.";
-    let message5= "You can use suddenDeath to define everything in just one round...";
-    console.log(message1);
-    console.log(message2);
-    console.log(message4);
-    console.log(message5);   
+    let message5= "You can use suddenDeath to define everything in just one round...";  
     theTextLog0.innerText = message1;
     theTextLog1.innerText= message2;
     theTextLog3.innerText= message4;
@@ -224,12 +201,23 @@ function suddenDeath() {
     theTextLog4.innerText="";
     theTextLog5.innerText="";
     theTextLog6.innerText="";
+    yourScoreCont.innerText = "Your Score is: " + playerScore;
+    computerScoreCont.innerText = "Borg's Score is: " + computerScore;
     console.log(  "Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".");
     do { game();
      } while( 
         (playerScore != 5 && computerScore < 5)||
         (computerScore != 5 && playerScore< 5));
 }
+
+
+
+
+
+
+
+
+
 // Here starts the event, style and form using javascript. 
 
 //Styling const:
@@ -315,7 +303,10 @@ textDiv.style.color = "white";
 textDiv.style.textAlign = "center";
 textDiv.style.overflowY = "scroll";
 textDiv.style.maxHeight= "400px";
-//I need to display the help and rule messages on the textDiv.
+theTextLog0.innerText = "Welcome, " ;
+theTextLog1.innerText= "Mon Capitane...";
+
+
 
 // Battlefield...
 
@@ -349,6 +340,8 @@ battlefieldDiv.style.flexWrap = "wrap";
 battlefieldDiv.style.order= "2";
 yourScoreCont.innerText = "Your Score is: " + playerScore;
 computerScoreCont.innerText = "Borg's Score is: " + computerScore;
+yourScoreCont.style.fontWeight="bold";
+computerScoreCont.style.fontWeight="bold";
 battlefieldDiv.style.color = "white";
 battlefieldDiv.style.alignContent= "center";
 battlefieldDiv.style.justifyContent= "space-evenly";
