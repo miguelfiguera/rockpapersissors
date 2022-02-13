@@ -46,9 +46,9 @@ function comparingResults() {
         playerScore++;
         let theRoundsLeft = 10 - roundCount;
         theTextLog0.innerText= "You won!";
-        theTextLog1.innerText= "This is the round number: " + roundCount;
-        theTextLog2.innerText= "Only " + theRoundsLeft + " rounds left...";
-        theTextLog3.innerText= "";
+        theTextLog1.innerText= playerSelection + " crushes " + computerSelection;
+        theTextLog2.innerText= "This is the round number: " + roundCount;
+        theTextLog3.innerText= "Only " + theRoundsLeft + " rounds left...";
         theTextLog4.innerText="";
         theTextLog5.innerText="";
         theTextLog6.innerText="";
@@ -75,9 +75,9 @@ function comparingResults() {
         computerScore++;
         let theRoundsLeft = 10 - roundCount;
         theTextLog0.innerText= "The borg are one step closer to assimilated you...";
-        theTextLog1.innerText= "This is the round number: " + roundCount;
-        theTextLog2.innerText= "Only " + theRoundsLeft + " rounds left...";
-        theTextLog3.innerText="";
+        theTextLog1.innerText= computerSelection + " beats " + playerSelection;
+        theTextLog2.innerText= "This is the round number: " + roundCount;
+        theTextLog3.innerText= "Only " + theRoundsLeft + " rounds left...";
         theTextLog4.innerText="";
         theTextLog5.innerText="";
         theTextLog6.innerText="";
@@ -91,9 +91,9 @@ function comparingResults() {
         roundCount++;
         let theRoundsLeft = 10 - roundCount;
         theTextLog0.innerText= "This is a draw...";
-        theTextLog1.innerText= "This is the round number: " + roundCount;
-        theTextLog2.innerText= "Only " + theRoundsLeft + " rounds left...";
-        theTextLog3.innerText= "";
+        theTextLog1.innerText= "Because both choose: " +playerSelection;
+        theTextLog2.innerText= "This is the round number: " + roundCount;
+        theTextLog3.innerText= "Only " + theRoundsLeft + " rounds left...";
         theTextLog4.innerText="";
         theTextLog5.innerText="";
         theTextLog6.innerText="";
@@ -111,14 +111,13 @@ function endGame() {
         (roundCount === 10 && playerScore===computerScore)||
         (roundCount > 10 && playerScore===computerScore )) {
         alert("Tie game... one more");
-        game();
     }
     else if(
         (roundCount === 10 && playerScore>computerScore) ||
         (playerScore === 5)||
         (roundCount >= 10 && playerScore>computerScore )) 
         {
-        alert("You save the day captain. Live long and prosper.");
+        alert("You save the day, Jean-Luc. Live long and prosper.");
     }
     else if (
             ( roundCount === 10 && computerScore>playerScore) ||
@@ -352,6 +351,12 @@ playerOptionsSquare.style.border= "2px";
 playerOptionsSquare.style.borderRadius = "25px";
 playerOptionsSquare.style.borderStyle = "solid";
 playerOptionsSquare.style.margin = "10px";
+//Here I have the image display of the game
+let imgPlayer = document.createElement("img");
+let imgComputer= document.createElement("img");
+playerOptionsSquare.appendChild(imgPlayer);
+pcOptionsSquare.appendChild(imgComputer);
+
 //layout of the battlefield
 pcOptionsSquare.style.order = "2";
 playerOptionsSquare.style.order = "1";
