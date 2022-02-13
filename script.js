@@ -123,7 +123,7 @@ function endGame() {
         (roundCount >= 10 && playerScore>computerScore )) 
         {
         alert("You save the day, Jean-Luc. Live long and prosper.");
-        imgComputer.src="./images/explotion.jpeg";
+        imgComputer.src="./images/borgexplotion.jpeg";
         imgPlayer.src="./images/Q.jpg";
     }
     else if (
@@ -215,6 +215,8 @@ function suddenDeath() {
     theTextLog7.innerText="";
     yourScoreCont.innerText = "Your Score is: " + playerScore;
     computerScoreCont.innerText = "Borg's Score is: " + computerScore;
+    imgComputer.src="./images/theborg.jpg";
+    imgPlayer.src=".images/enterprise.jpg";
     console.log(  "Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".");
     }
 
