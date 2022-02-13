@@ -123,6 +123,8 @@ function endGame() {
         (roundCount >= 10 && playerScore>computerScore )) 
         {
         alert("You save the day, Jean-Luc. Live long and prosper.");
+        imgComputer.src="./images/explotion.jpeg";
+        imgPlayer.src="./images/Q.jpg";
     }
     else if (
             ( roundCount === 10 && computerScore>playerScore) ||
@@ -130,6 +132,8 @@ function endGame() {
             ( roundCount >= 10 && computerScore>playerScore)) 
             {
         alert("The Borg now rule this world and they're gonna assimilated us... bip bop bip...resistance is futile...");
+        imgPlayer.src= "./images/explotion.jpeg";
+        imgComputer.src= "./images/locutus.jpeg";
     }
     else { 
         roundsLeft = 10 - roundCount;
