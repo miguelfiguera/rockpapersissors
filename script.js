@@ -179,6 +179,8 @@ function reset() {
     theTextLog7.innerText="";
     yourScoreCont.innerText = "Your Score is: " + playerScore;
     computerScoreCont.innerText = "Borg's Score is: " + computerScore;
+    imgComputer.src="./images/theborgs.jpg";
+    imgPlayer.src="./images/enterprise.jpg";
 }
 
 function help() {
