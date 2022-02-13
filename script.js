@@ -31,7 +31,7 @@ function computerPlay() {
 }
 
 
-function comparingResults() { 
+function comparingResults(playerScore, roundCount, computerScore) { 
     computerPlay();
     let computerSelection = computerPlay();  
     if (
@@ -126,7 +126,16 @@ function rules() {
     console.log(message6);
     console.log(message7);
     console.log(message8);
-} 
+    theTextLog0.innerText= message1
+    theTextLog1.innerText= message2
+    theTextLog2.innerText= message3
+    theTextLog3.innerText= message4
+    theTextLog4.innerText= message5
+    theTextLog5.innerText= message6
+    theTextLog6.innerText= message7
+    theTextLog7.innerText= message8
+    
+}
 
 /*function tenRounds() {
     do{
@@ -141,25 +150,46 @@ function reset() {
     playerScore = 0;
     roundCount = 0;
     computerScore = 0;
+    theTextLog0.innerText="Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".";
+    theTextLog1.innerText="";
+    theTextLog2.innerText="";
+    theTextLog3.innerText="";
+    theTextLog4.innerText="";
+    theTextLog5.innerText="";
+    theTextLog6.innerText="";
+    theTextLog7.innerText="";
     console.log(  "Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".");
 }
 
 function help() {
-    let message1="game() plays one round of this game.";
-    let message2= "reset() puts the score and the rounds on 0 again.";
-    let message3= "tenRounds() plays all the rounds one after the other (for people in a hurry).";
-    let message4= "rules() opens an explanation of how to play 'Rock, Paper, Scissors, Lizzard and Spock.";
-    let message5= "You can use suddenDeath() to define everything in just one round...";
+    let message1="game plays one round of this game.";
+    let message2= "reset puts the score and the rounds on 0 again.";
+    let message4= "rules opens an explanation of how to play 'Rock, Paper, Scissors, Lizzard and Spock.";
+    let message5= "You can use suddenDeath to define everything in just one round...";
     console.log(message1);
     console.log(message2);
-    console.log(message3);
     console.log(message4);
-    console.log(message5);
+    console.log(message5);   
+    theTextLog0.innerText = message1;
+    theTextLog1.innerText= message2;
+    theTextLog3.innerText= message4;
+    theTextLog4.innerText =message5;
+    theTextLog2.innerText="";
+    theTextLog7.innerText="";
+    theTextLog5.innerText="";
+    theTextLog6.innerText="";
 }
 function suddenDeath() { 
     computerScore = 4;
     roundCount= 7;
     playerScore= 4;
+    theTextLog0.innerText="Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".";
+    theTextLog1.innerText="";
+    theTextLog2.innerText="";
+    theTextLog3.innerText="";
+    theTextLog4.innerText="";
+    theTextLog5.innerText="";
+    theTextLog6.innerText="";
     console.log(  "Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".");
     do { game();
      } while( 
@@ -225,12 +255,32 @@ let leftPanel=document.getElementsByClassName("messages");
 let h4=document.createElement ("h4");
 let innerDivLeftPanel=document.createElement ("div");
 let textDiv=document.createElement("div");
+let theTextLog0= document.createElement("p");
+let theTextLog1= document.createElement("p");
+let theTextLog2= document.createElement("p");
+let theTextLog3= document.createElement("p");
+let theTextLog4= document.createElement("p");
+let theTextLog5= document.createElement("p");
+let theTextLog6= document.createElement("p");
+let theTextLog7= document.createElement("p");
 h4.innerText="CONSOLE-LOG";
 h4.style.color = "white";
 h4.style.textAlign= "center";
 leftPanel[0].appendChild(innerDivLeftPanel);
 innerDivLeftPanel.appendChild(h4);
 innerDivLeftPanel.appendChild(textDiv);
+textDiv.appendChild(theTextLog0);
+textDiv.appendChild(theTextLog1);
+textDiv.appendChild(theTextLog2);
+textDiv.appendChild(theTextLog3);
+textDiv.appendChild(theTextLog4);
+textDiv.appendChild(theTextLog5);
+textDiv.appendChild(theTextLog6);
+textDiv.appendChild(theTextLog7);
+textDiv.style.color = "white";
+textDiv.style.textAlign = "center";
+textDiv.style.overflowY = "scroll";
+textDiv.style.maxHeight= "400px";
 //I need to display the help and rule messages on the textDiv.
 
 // Battlefield...
