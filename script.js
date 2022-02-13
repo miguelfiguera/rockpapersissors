@@ -444,11 +444,11 @@ h5.style.color = "white";
 h5.style.textAlign = "center";
 
 //button Options Panel functions
-spockButton.onclick = () => {playerSelection="SPOCK"; game();imgPlayer.src="./images/spock.jpg";}
-rockButton.onclick = () => {playerSelection="ROCK"; game();imgPlayer.src="./images/rock.jpg";}
-lizzardButton.onclick = () => {playerSelection="LIZZARD"; game();imgPlayer.src="./images/juana la iguana.jpg";}
-paperButton.onclick = () => {playerSelection="PAPER"; game();imgPlayer.src="./images/paper.jpg";}
-scissorsButton.onclick = () => {playerSelection="SCISSORS"; game();imgPlayer.src="./images/scissors.jpg";}
+spockButton.onclick = () => {playerSelection="SPOCK";imgPlayer.src="./images/spock.jpg"; game();}
+rockButton.onclick = () => {playerSelection="ROCK";imgPlayer.src="./images/rock.jpg"; game();}
+lizzardButton.onclick = () => {playerSelection="LIZZARD";imgPlayer.src="./images/juana la iguana.jpg"; game();}
+paperButton.onclick = () => {playerSelection="PAPER";imgPlayer.src="./images/paper.jpg";game();}
+scissorsButton.onclick = () => {playerSelection="SCISSORS";imgPlayer.src="./images/scissors.jpg";game();}
 
 
 //buttons Right Panel
