@@ -1,8 +1,8 @@
-/*alert("Welcome to rock, paper, scissors, lizzard or spock.");
+alert("Welcome to rock, paper, scissors, lizzard or spock.");
 alert("Humanity is in the verge of extintion... we are fighting the Borgs");
 alert("No body knows why, but they have decided to play this game to define who rules the earth.")
 alert("To play, just choose your weapon!");
-alert("if you additional guidance please use the commands on your right...");*/
+alert("if you additional guidance please use the commands on your right...");
 
 
 
