@@ -13,7 +13,6 @@ let playerScore = 0;
 let computerScore= 0;
 let roundCount = 0;
 
-
 function computerPlay() {
     let selection = Math.floor(Math.random()*5);
     switch (selection) {
@@ -31,7 +30,7 @@ function computerPlay() {
 }
 
 
-function comparingResults(playerScore, roundCount, computerScore) { 
+function comparingResults() { 
     computerPlay();
     let computerSelection = computerPlay();  
     if (
@@ -48,8 +47,19 @@ function comparingResults(playerScore, roundCount, computerScore) {
     ){ 
         roundCount++;
         playerScore++;
-        alert("You won!");
+        let theRoundsLeft = 10 - roundCount;
+        theTextLog0.innerText= "You won!";
+        theTextLog1.innerText= "This is the round number: " + roundCount;
+        theTextLog2.innerText= "Only " + theRoundsLeft + " rounds left...";
+        theTextLog3.innerText="";
+        theTextLog4.innerText="";
+        theTextLog5.innerText="";
+        theTextLog6.innerText="";
+        theTextLog7.innerText="";    
         console.log("you won!");
+        yourScoreCont.innerText = "Your Score is: " + playerScore;
+        computerScoreCont.innerText = "Borg's Score is: " + computerScore;        
+
 }    
  else if (
     (computerSelection==="ROCK" && playerSelection === "SCISSORS") ||
@@ -65,12 +75,33 @@ function comparingResults(playerScore, roundCount, computerScore) {
     ){ 
         roundCount++;
         computerScore++;
-        alert("We are one step closer to assimilated you...");
+        let theRoundsLeft = 10 - roundCount;
+        theTextLog0.innerText= "The borg are one step closer to assimilated you...";
+        theTextLog1.innerText= "This is the round number: " + roundCount;
+        theTextLog2.innerText= "Only " + theRoundsLeft + " rounds left...";
+        theTextLog3.innerText="";
+        theTextLog4.innerText="";
+        theTextLog5.innerText="";
+        theTextLog6.innerText="";
+        theTextLog7.innerText="";    
+        yourScoreCont.innerText = "Your Score is: " + playerScore;
+        computerScoreCont.innerText = "Borg's Score is: " + computerScore;
         console.log("You lose...this round.") 
     }
     else {
         roundCount++;
-        alert("This is a draw...");
+        let theRoundsLeft = 10 - roundCount;
+        theTextLog0.innerText= "This is a draw...";
+        theTextLog1.innerText= "This is the round number: " + roundCount;
+        theTextLog2.innerText= "Only " + theRoundsLeft + " rounds left...";
+        theTextLog3.innerText="";
+        theTextLog4.innerText="";
+        theTextLog5.innerText="";
+        theTextLog6.innerText="";
+        theTextLog7.innerText=""; 
+        yourScoreCont.innerText = "Your Score is: " + playerScore;
+        computerScoreCont.innerText = "Borg's Score is: " + computerScore;
+
     }
     console.log ("You have choseen: " + playerSelection);
     console.log("The Borg have choseen: " + computerSelection);
@@ -111,13 +142,13 @@ function game() {
 }
 function rules() {
     let message1 = "The rules are simple: ";
-    let message2 = "Rock smash scissors and crushes lizzard,";
-    let message3 = "paper disproves spock and covers rock,";
-    let message4 = "scissors decapitated lizzard and cut paper,";
-    let message5 = "spock smashes scissors and fasers rock...";
-    let message6 = "and lizzard poisons spock and eats paper...";
-    let message7 = "you have ten rounds, the first team to get to 5 points wins the game.";
-    let message8 = "The fate of the humans is on your hands, good luck, mon capitane";
+    let message2 = "1) Rock smash scissors and crushes lizzard,";
+    let message3 = "2) Paper disproves spock and covers rock,";
+    let message4 = "3) Scissors decapitated lizzard and cut paper,";
+    let message5 = "4) Spock smashes scissors and fasers rock...";
+    let message6 = "5) And lizzard poisons spock and eats paper...";
+    let message7 = "6) You have ten rounds, the first team to get to 5 points wins the game.";
+    let message8 = "The fate of the humans is on your hands, good luck, Mon Capitane";
     console.log (message1);
     console.log(message2);
     console.log(message3);
@@ -134,6 +165,9 @@ function rules() {
     theTextLog5.innerText= message6
     theTextLog6.innerText= message7
     theTextLog7.innerText= message8
+    theTextLog7.style.fontStyle = "italic";
+    theTextLog7.style.fontWeight = "bold";
+
     
 }
 
