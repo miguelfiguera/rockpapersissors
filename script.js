@@ -201,21 +201,11 @@ function suddenDeath() {
     theTextLog4.innerText="";
     theTextLog5.innerText="";
     theTextLog6.innerText="";
+    theTextLog7.innerText="";
     yourScoreCont.innerText = "Your Score is: " + playerScore;
     computerScoreCont.innerText = "Borg's Score is: " + computerScore;
     console.log(  "Now player score is " + playerScore + ". Computer's Score is " + computerScore + ". And the round count is " + roundCount + ".");
-    do { game();
-     } while( 
-        (playerScore != 5 && computerScore < 5)||
-        (computerScore != 5 && playerScore< 5));
-}
-
-
-
-
-
-
-
+    }
 
 
 // Here starts the event, style and form using javascript. 
