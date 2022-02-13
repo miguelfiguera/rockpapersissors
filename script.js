@@ -15,21 +15,26 @@ function computerPlay() {
     let selection = Math.floor(Math.random()*5);
     switch (selection) {
         case 0 :
+            imgComputer.src="./images/rock.jpg";
             return "ROCK"
         case 1:
+            imgComputer.src="./images/paper.jpg";
             return "PAPER"
         case 2: 
+        imgComputer.src="./images/scissors.jpg";
             return "SCISSORS"
         case 3:
+            imgComputer.src="./images/spock.jpg";
             return "SPOCK"
         case 4:
+            imgComputer.src="./images/juana la iguana.jpg";
             return "LIZZARD"
     }
 }
 
 function comparingResults() { 
     computerPlay();
-    let computerSelection = computerPlay();  
+    let computerSelection = computerPlay();
     if (
         (playerSelection==="ROCK" && computerSelection==="SCISSORS")||
         (playerSelection=== "ROCK" && computerSelection=== "LIZZARD") || 
@@ -366,7 +371,7 @@ imgComputer.src="./images/theborgs.jpg";
 imgComputer.style.borderRadius="25px";
 imgComputer.style.width="246px";
 imgComputer.style.height="246px";
-//I was unable to center this images on the square for them...
+//I was unable to center this images on the squares for them... later on I will learn how but today I write my failure...
 
 
 //layout of the battlefield
